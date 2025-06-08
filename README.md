@@ -18,14 +18,14 @@
 1. Клонируем репозиторий
     ```
    
-    git clone https://github.com/StatusSSS/hockey_squad.git
+    git clone https://github.com/StatusSSS/betsapi_football.git
    
-    cd hockey_squad
+    cd betsapi_football
    ```
 
 2. Cоздаем virtualenv внутри проекта
     ```
-    python3.10 -m venv venv
+    python3 -m venv venv
     
     source venv/bin/activate
    ```

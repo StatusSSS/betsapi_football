@@ -9,9 +9,6 @@ from betsapi_football_scraper.repositories.teams_repo import TeamsRepo
 
 
 class TeamsMarketValueScraper:
-    """
-
-    """
 
     BASE_V3 = "https://api.b365api.com/v3"
     BASE_V1 = "https://api.betsapi.com/v1"
@@ -102,10 +99,6 @@ class TeamsMarketValueScraper:
         return data.get("results", [{}])[0] if data.get("results") else {}
 
     def _process_match(self, team: Dict, match_id: int) -> Tuple | None:
-        """
-        Разбирает tm_stats и возвращает кортеж из 5 значений
-        либо None, если статистика некорректна.
-        """
         details: Dict | None = None
         for _ in range(10):
             details = self._event_details(match_id)

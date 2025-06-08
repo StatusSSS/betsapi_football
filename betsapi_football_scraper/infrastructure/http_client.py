@@ -7,8 +7,6 @@ from betsapi_football_scraper.infrastructure.config import Settings
 from betsapi_football_scraper.infrastructure.logger import logger
 
 class HttpClient:
-    """Минимальный HTTP‑клиент без прокси, но с ретраями и задержкой."""
-
     def __init__(self, cfg: Settings):
         self.cfg = cfg
 
