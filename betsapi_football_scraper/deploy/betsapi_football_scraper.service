@@ -1,8 +1,9 @@
 [Unit]
 Description=Betsapi football scraper
-After=network.target
+
 
 [Service]
+Type=oneshot
 User=<SYSTEM_USER>
 Group=<SYSTEM_GROUP>
 
@@ -10,8 +11,3 @@ WorkingDirectory=<ABSOLUTE_PATH_TO>/betsapi_football
 EnvironmentFile=<ABSOLUTE_PATH_TO>/betsapi_football/.env
 ExecStart=<ABSOLUTE_PATH_TO>/betsapi_football/venv/bin/python -m betsapi_football_scraper.runner
 
-Restart=on-failure
-RestartSec=10
-
-[Install]
-WantedBy=multi-user.target

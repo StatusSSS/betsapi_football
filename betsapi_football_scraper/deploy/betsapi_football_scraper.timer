@@ -1,0 +1,12 @@
+[Unit]
+Description=Run Betsapi football scraper daily at 02:30
+
+[Timer]
+OnCalendar=*-*-* 02:30
+
+Persistent=true
+
+Unit=betsapi_football_scraper.service
+
+[Install]
+WantedBy=timers.target

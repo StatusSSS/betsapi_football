@@ -72,7 +72,6 @@ class TeamsMarketValueScraper:
         update_rows.append((*stats_tuple, team["id"]))
 
 
-
     def _closest_match(self, team_id: int, mode: str) -> int | None:
         url = f"{self.BASE_V3}/events/{mode}"
         data = self.http.get_json(
@@ -115,7 +114,6 @@ class TeamsMarketValueScraper:
             idx = 1
         else:
             return None
-
 
         if str(match_id) == "9834789":
             idx = 1 - idx
